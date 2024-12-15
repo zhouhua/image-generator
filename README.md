@@ -1,57 +1,74 @@
 ---
-name: Open Graph Image Generation
-slug: og-image-generation
-description: Compute and generate dynamic social card images with React components.
-framework: Next.js
-useCase: Edge Functions
-css: Tailwind
-deployUrl: https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/edge-functions/vercel-og-nextjs&project-name=vercel-og-nextjs&repository-name=vercel-og-nextjs
-demoUrl: https://og-examples.vercel.sh/api/static
-relatedTemplates:
-  - nextjs-boilerplate
-  - aws-s3-image-upload-nextjs
-  - platforms-starter-kit
-  - blog-starter-kit
+name: Date Image Generator
+slug: date-image-generator
+description: A fun and powerful tool to create dynamic date images with customizable styles and formats.
 ---
 
-# Vercel OG + Next.js
+# 🎉 Date Image Generator
 
-This example shows how to use [Vercel OG](https://vercel.com/docs/concepts/functions/edge-functions/og-image-generation) with Next.js.
+[中文版本](README.zh.md)
 
-## Demo
+## 🚀 Features
 
-- [Static Text](https://og-examples.vercel.sh/api/static)
-- [Vercel Card](https://og-examples.vercel.sh/api/vercel)
-- [Dynamic Text from URL Query](https://og-examples.vercel.sh/api/param)
-- [Embed SVG Image](https://og-examples.vercel.sh/api/image-svg)
-- [Dynamic PNG Image Based on URL Queries](https://og-examples.vercel.sh/api/dynamic-image?username=vercel)
-- [Custom Font](https://og-examples.vercel.sh/api/custom-font)
-- [Emoji](https://og-examples.vercel.sh/api/emoji)
-- [Languages](https://og-examples.vercel.sh/api/language)
-- [Encrypted Token](https://og-examples.vercel.sh/encrypted/a)
+- **Multiple Formats**: Generate images in SVG, PNG, JPEG, and WebP formats to suit any occasion.
+- **Timezone Support**: Easily handle internationalization with support for all time zones.
+- **Custom Styles**: Tailor colors, sizes, padding, and more to match your design perfectly.
+- **Smart Caching**: Enjoy optimized performance with intelligent caching based on date formats.
+- **Edge Runtime**: Powered by Vercel Edge Functions for lightning-fast responses worldwide.
+- **Open Source**: Free to use and modify under the MIT License.
 
-## How to Use
+## 🌐 Check It Out
 
-You can choose from one of the following two methods to use this repository:
+Ready to create your own date images? Visit us at: [Date Image Generator](https://date-image-generator.vercel.app/)
 
-### One-Click Deploy
+## 📡 API Usage
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+### Generate Date Images
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/edge-functions/vercel-og-nextjs&project-name=vercel-og-nextjs&repository-name=vercel-og-nextjs)
+You can generate date images using the following API:
 
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
-
-```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/edge-functions/vercel-og-nextjs
+```
+GET /api/date-image?format={format}&utc={UTC offset}&color={color}&background={background color}&fontSize={font size}&padding={padding}&radius={border radius}
 ```
 
-Next, run Next.js in development mode:
+#### Parameter Details
 
-```bash
-pnpm dev
-```
+- `format`: The date format, default is `YYYY-MM-DD`.
+- `utc`: UTC offset, e.g., `+08:00` or `-05:00`.
+- `color`: Text color, default is `#000000`.
+- `background`: Background color, default is transparent.
+- `fontSize`: Font size, default is `48`.
+- `padding`: Padding, default is `20`.
+- `radius`: Border radius, default is `0`.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=edge-middleware-eap) ([Documentation](https://nextjs.org/docs/deployment)).
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js
+- **Styling**: Tailwind CSS
+- **Runtime**: Vercel Edge Functions
+
+## 🚧 Development Guide
+
+1. **Clone the Project**:
+
+   ```bash
+   git clone https://github.com/zhouhua/date-image-generator.git
+   cd date-image-generator
+   ```
+
+2. **Install Dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+3. **Run in Development Mode**:
+
+   ```bash
+   npm run dev
+   ```
+
+## 📝 To-Do List
+
+- **Enhance Test Cases**: Fix existing test issues to ensure all features work correctly.
+- **Add Icon Templates**: Support not only text-based images but also icon-based images.
